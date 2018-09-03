@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <TextView
+        android:id="@+id/current_score_prefix"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Current Score: "
+        android:textSize="20dp"
+        android:layout_margin="4dp"
+        />
+
+    <TextView
+        android:id="@+id/current_score"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="20dp"
+        android:layout_margin="4dp"
+        android:layout_toEndOf="@+id/current_score_prefix"
+        />
+
+    <TextView
+        android:id="@+id/high_score_prefix"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="HighScore: "
+        android:textSize="20dp"
+        android:layout_margin="4dp"
+        android:layout_below="@+id/current_score"
+        />
+
+    <TextView
+        android:id="@+id/high_score"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="20dp"
+        android:layout_margin="4dp"
+        android:layout_below="@+id/current_score"
+        android:layout_toEndOf="@+id/high_score_prefix"
+        android:text="0"
+        />
+
+    <ListView
+        android:id="@+id/list_view"
+        android:layout_width="match_parent"
+        android:layout_height="240dp"
+        android:layout_below="@+id/high_score">
+
+        
+    </ListView>
+
+
+    <RelativeLayout
+        android:id="@+id/rel_layout"
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/list_view"
+        android:layout_margin="5dp"
+        >
+
+
+
+        <android.support.design.widget.FloatingActionButton
+            android:id="@+id/higher_fab"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="start|bottom"
+            android:layout_toEndOf="@id/dice_image"
+            android:layout_centerVertical="true"
+            android:layout_margin="16dp"
+            android:src="@drawable/ic_keyboard_arrow_up_white_24dp"
+            android:scaleType="center"
+
+            />
+
+        <ImageView
+            android:contentDescription="Dice Image"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/dice_image"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:src="@drawable/d1"
+            />
+
+        <android.support.design.widget.FloatingActionButton
+            android:id="@+id/lower_fab"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="end|bottom"
+            android:layout_toStartOf="@id/dice_image"
+            android:layout_centerVertical="true"
+            android:layout_margin="16dp"
+            android:src="@drawable/ic_keyboard_arrow_down_white_24dp"
+            android:scaleType="center"
+
+
+            />
+
+    </RelativeLayout>
+
+
+
+
+
+
+
+</RelativeLayout>
+
